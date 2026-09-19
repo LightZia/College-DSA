@@ -8,8 +8,17 @@ public class twointer {
         long C = inScan.nextInt();
         long D = inScan.nextInt();
 
-        if (C >= A && C <= B) {
+        if (A >= C && B <= D) {
+            System.out.print(A + " " + B);
+        }
+        else if (C >= A && D <= B) {
+            System.out.print(C + " " + D);
+        }
+        else if (C >= A && C <= B ) {
             System.out.print(C + " " + B);
+        }
+        else if (D >= A && D <= B) {
+            System.out.print(A + " " + D);
         }
         else {
             System.out.print(-1);
