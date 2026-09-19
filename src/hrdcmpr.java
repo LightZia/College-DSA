@@ -4,27 +4,15 @@ public class hrdcmpr {
     public static void main(String[] args) {
         Scanner inScan = new Scanner(System.in);
         int A = inScan.nextInt();
-        int B = inScan.nextInt();
+        long B = inScan.nextLong();
         int C = inScan.nextInt();
-        int D = inScan.nextInt();
+        long D = inScan.nextLong();
 
-        double lft = Math.pow(A, B);
-        double rt = Math.pow(C, D);
+        double AB = (Math.log(A)*B);
+        double CD = (Math.log(C)*D);
 
-//        System.out.println(lft);
-//        System.out.println(rt);
-
-        if (lft > Math.pow(10, 18)) {
-            lft = lft/100000000;
-            rt = rt/1000000000;
-        }
-        if(lft > rt) {
-            if (A < C && B == D) {
-                System.out.print("NO");
-            }
-            else {
-                System.out.print("YES");
-            }
+        if(AB > CD) {
+            System.out.print("YES");
         }
         else {
             System.out.print("NO");
